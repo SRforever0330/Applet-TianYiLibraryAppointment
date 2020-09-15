@@ -1,0 +1,34 @@
+<view class="container">
+  <!-- 背景图 -->
+  <image class="background" mode="scareToFill" src="../../resource/img/start.jpg"></image>
+ <!-- 轮播图开始 --> 
+ <view class="index_swiper">
+  <swiper autoplay indicator-dots circular>
+    <swiper-item wx:for="{{img}}" wx:key="*this"  data-url="{{item}}">
+      <view>
+        <image mode="widthFix" src="{{item}}"> </image>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view class="swiper-btn" >
+    <view class="scan-box" bindtap="handleScan">
+        <i class="iconfont icon-saoyisao"></i>
+        <view class="word">扫一扫</view>
+    </view>
+</view>
+  </view>
+  <!-- 轮播图结束 -->
+</view>
+
+<view class="notice-contain">
+  <view class="title">使用规则</view>
+  <view class="list">
+      <view class="item" wx:for="{{noticeList}}" wx:key="*this" data-item='{{item}}'>
+          {{item.content}}
+      </view>
+      <view class="border1 list-border"></view>
+      <view class="border2 list-border"></view>
+      <view class="border3 list-border"></view>
+      <view class="border4 list-border"></view>
+  </view>
+</view>

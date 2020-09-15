@@ -1,0 +1,36 @@
+<view class="container"> 
+<!-- 头像 -->
+    <!--图片  -->
+    <view class="user_info_wrap" wx:if="{{logged}}">
+      <view class="user_img_wrap">
+       <!-- 大图片 -->
+        <image class="user_bg" src="{{userinfo.userinfo.avatarUrl}}"></image>
+        <view class="user_info" >
+          <!-- 小图片 -->
+          <image class="user_icon" src="{{userinfo.userinfo.avatarUrl}}"></image>
+          <!-- 名称 -->
+          <view class="user_name">{{userinfo.userinfo.nickName}}</view>
+        </view>
+      </view>
+    </view>
+    <!-- 登录按钮 -->
+    <view class="user_info_wrap log" wx:else>
+      <image class="log1" mode="scareToFill" src="../../resource/img/log1.png"></image>
+      <button  class="logged" open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo" ></button>
+    </view>
+   <!-- 内容 -->
+   <view class="content">
+     <image class="background" mode="scareToFill" src="../../resource/img/start1.jpg"></image>
+     <view bindtap="handleApp"  class="appointment">我的预约</view>
+     <view bindtap="handleFb" class="feedback">意见反馈</view>
+     <view class="recommend">
+       <view>推荐他人</view>
+       <button id="share" open-type="share" ></button>
+     </view>
+   </view>
+   <view  wx:if="{{logged}}" class="exitlog">
+       <view  bindtap="exit" class="confirm-btn"  >
+       <text>退出登录</text>
+      </view>
+   </view>
+</view>

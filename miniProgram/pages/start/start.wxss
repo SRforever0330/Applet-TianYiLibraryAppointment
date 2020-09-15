@@ -1,0 +1,34 @@
+.bg{
+  display: flex;
+  justify-content: center;
+  
+}
+.background{
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+.enter{
+  z-index: 2;
+  position: relative;
+  width: 60%;
+  position: fixed;
+  bottom: 200rpx;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  /* margin-top: -100rpx; */
+}
+.enter1{
+  width: 90%;
+}
+button{
+  z-index: 2;
+  position:absolute;
+  height: 200rpx;
+  opacity: 0;
+}

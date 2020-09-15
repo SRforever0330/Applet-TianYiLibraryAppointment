@@ -1,0 +1,44 @@
+<navigation-bar bindback="handleback"></navigation-bar>
+<view class="container" wx:if="{{status==1||status==2||status==3}}"> 
+    <!-- 图开始 --> 
+          <view class="image">
+            <image mode="scaleToFill" src="{{img_src}}"> </image>
+          </view>   
+    <!-- 用户信息 -->
+      <view class="info" style="magin-top:20rpx">
+          <view class="item">
+              <view class="title">房间名称:</view>
+              <view class="content">{{full_name}}</view>
+          </view>
+          <view class="item">
+            <view class="title">座位名称:</view>
+            <view class="content">{{seats}}</view>
+        </view>
+        <view class="item">
+              <view class="title">开始时间:</view>
+              <view class="content">{{startTime}}</view>
+          </view>
+          <view class="item">
+              <view class="title">签到时间:</view>
+              <view class="content">请于{{signEndTime}}之前签到</view>
+      </view>
+      <view class="item">
+        <view class="title">当前状态:</view>
+        <view class="content one" wx:if="{{status==1}}">已预约</view>
+        <view class="content two" wx:if="{{status==2}}">已签到</view>
+        <view class="content three" wx:if="{{status==3}}">已超时</view>
+    </view>
+    </view> 
+    <!-- 签到 -->
+    <view class="sign"  wx:if="{{status==1}}">
+       <view class="button signIn" bindtap="handleSignIn">签到</view>
+       <view class="button cancel" bindtap="handleCancel">取消预约</view>
+    </view>
+    <view class="sign"  wx:if="{{status==2}}">
+      <view class="button signOut" bindtap="handleSignOut">签退</view>
+   </view>
+  </view>
+<view wx:if="{{status==0}}"><image class="none" mode="scareToFill" src="../../resource/img/none.jpg"></image>
+  </view>
+  <view wx:if="{{status==undefined}}"><image class="none" mode="scareToFill" src="../../resource/img/none.jpg"></image>
+  </view>

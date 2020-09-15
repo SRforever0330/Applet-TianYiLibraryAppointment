@@ -1,0 +1,48 @@
+{
+  "pages":[
+   
+    "pages/start/start",
+    "pages/index/index",
+    "pages/appointment/appointment",
+    "pages/seat/seat",
+    "pages/confirm/confirm",
+    "pages/myAppointment/myAppointment",
+    "pages/user/user",
+    "pages/feedback/feedback",
+     "pages/reset/reset"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#eb4450",
+    "navigationBarTitleText": "图书馆预约",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#eb4450",
+    "borderStyle": "black",
+    "backgroundColor": "#f4f4f4",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "resource/icon/home.png",
+        "selectedIconPath": "resource/icon/home-active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/appointment/appointment",
+        "iconPath": "resource/icon/myreser.png",
+        "selectedIconPath": "resource/icon/myreser-active.png",
+        "text": "预约"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "resource/icon/head.png",
+        "selectedIconPath": "resource/icon/head-active.png",
+        "text": "个人"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

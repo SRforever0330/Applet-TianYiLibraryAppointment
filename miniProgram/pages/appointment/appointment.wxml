@@ -1,0 +1,21 @@
+  <view class="item" wx:for="{{meeting_room}}" wx:key="_id" >
+    <!-- 左 -->
+    <view class="image">
+    <image mode="scaleToFill" src="{{item.src[0]}}"
+     bindtap="handlePreviewImg" data-imgs="{{item.src}}"></image>
+    </view>
+    <!-- 中 -->
+    <view class="info">
+      <view class="room_name">{{item.full_name}}</view>
+      <view class="time">8:00-22:30</view>
+      <view class="seat_num">
+        <view class="num {{item.current===0?'empty':''}}">{{item.current}}/{{item.max}} </view>
+        <view class="word" wx:if="{{item.current===0}}">已满</view>
+      </view>
+    </view>
+    <!-- 右 -->
+   
+    <view bindtap="handleReserveTap" class="appointment {{item.current===0?'empty2':''}}" 
+    data-name="{{item.name}}"  data-full="{{item.full_name}}" data-current="{{item.current}}"  data-img="{{item.src[0]}}"
+    data-floor="{{item.floor}}" >预约</view>
+  </view>

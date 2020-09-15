@@ -1,0 +1,42 @@
+<view class='serverConfirm'>
+	<view class="list">
+	    <view class="item">
+	    	<view class="label">预约日期：</view>
+	    	<view class="content">{{dates}}</view>
+	    	<i class="iconfont icon-cl-icon-right"></i>
+	    </view>
+	    <view class="item">
+	    	<view class="label">选择楼层：</view>
+	    	<view class="content">{{floor}}</view>
+	    	<i class="iconfont icon-cl-icon-right"></i>
+	    </view>
+	    <view class="item">
+	    	<view class="label">选择房间：</view>
+	    	<view class="content">{{room}}</view>
+	    	<i class="iconfont icon-cl-icon-right"></i>
+	    </view>
+	    <view class="item">
+	    	<view class="label">选择座位：</view>
+	    	<view class="content">{{seats}}</view>
+	    	<i class="iconfont icon-cl-icon-right"></i>
+	    </view>
+	    <view class="item">
+	    	<view class="label">开始时间：</view>
+	    	<view class="content">{{startTime}}</view>
+	    	<i class="iconfont icon-cl-icon-right"></i>
+			</view>
+			<view class="item">
+	    	<view class="label">结束时间：</view>
+	    	<view class="content">{{endTime}}</view>
+	    	<i class="iconfont icon-cl-icon-right"></i>
+			</view>
+	    <view class="item">
+	    	<view class="label">签到时间：</view>
+	    	<view class="content">请于{{signEndTime}}之前签到</view>
+	    	<i class="iconfont icon-cl-icon-right"></i>
+			</view>
+		
+    </view>
+    
+    <view class="btn" bindtap="handleConfirm">确认</view>
+</view>

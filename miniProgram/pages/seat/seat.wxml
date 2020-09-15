@@ -1,0 +1,69 @@
+<view class='createSeatIndex'>
+<!-- 顶部日期 -->
+   <view class="top-date">
+    <view class="top-date-title">
+      <i class="iconfont icon-rili"></i>
+      <view mode="date" value="{{date}}" > 
+          <view class="picker">  
+             {{dates}}  
+          </view>  
+        </view>  
+  </view>
+   </view>
+<!-- 信息 -->
+<view class="pick-contain">
+  <view class="floor">
+    <view class="label">楼层：</view>
+    <view class="pick-result">
+                <view>
+                    <text>{{floor}}</text>
+                </view>
+        </view>
+  </view>
+  <view class="room">
+    <view class="label">房间：</view>
+    <view class="pick-result">
+                <view>
+                    <text>{{room}}</text>
+                </view>
+        </view>
+  </view>
+  <view class="situation">
+    <view class="label">座位预约情况：</view>
+    <view class="color-box">
+      <!-- 有人<i class="box status0"></i> -->
+      空闲<i class="box status1"></i>已预约<i class="box status2"></i>
+    </view>
+  </view>
+</view>
+   <!-- 座位 -->
+  <view class="seat-contain">
+  <view class="item" wx:for="{{tableList}}" wx:key="index" wx:for-index="index1">
+    <view class="top">
+      <view 
+        class="top-seat {{'status' + i.status}} seat-item" 
+        wx:for="{{item.arr1}}" 
+        wx:key="uniqe"
+        wx:for-item="i" wx:for-index="index2"
+                  bindtap="handleSeat" data-date="{{dates}}" data-floor="{{floor}}" data-room="{{room}}"
+                  data-table="{{item.name}}" data-seat="{{i.name}}" data-status="{{i.status}}"
+                  data-full_name="{{full_name}}"
+                  data-table_index="{{index1}}" data-seat_index1="{{index2}}"
+      >{{i.name}}</view>
+    </view>
+    <view class="table">{{item.name}}</view>
+    <view class="bottom">
+      <view 
+        class="bottom-seat {{'status' + j.status}} seat-item" 
+        wx:for="{{item.arr2}}" 
+        wx:for-item="j" wx:for-index="index3"
+        wx:key="uniqe"
+                  bindtap="handleSeat" data-date="{{dates}}" data-floor="{{floor}}" data-room="{{room}}"
+                  data-table="{{item.name}}" data-seat="{{j.name}}" data-status="{{j.status}}" 
+                  data-full_name="{{full_name}}"
+                  data-table_index="{{index1}}" data-seat_index2="{{index3}}"  
+      >{{j.name}}</view>
+    </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "自习室座位",
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark"
+}

@@ -1,0 +1,7 @@
+<view class="bg">
+  <image class="background" mode="scareToFill" src="../../resource/img/start.jpg"></image>
+  <view class="enter">
+    <image class="enter1" mode="widthFix" src="../../resource/img/enter1.png"></image>
+    <button open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo" ></button>
+  </view>
+</view>
